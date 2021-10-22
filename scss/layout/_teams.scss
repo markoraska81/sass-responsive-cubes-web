@@ -1,0 +1,78 @@
+// ===== SECTION TEAMS STYLE ===== //
+.teams {
+  @include wrapper(80%, 0 auto);
+
+  // ===== TEAMS BODY ===== //
+  &-body {
+    @include flexBox(space-between, center);
+    flex-direction: column;
+    flex-wrap: wrap;
+    gap: 1rem;
+    text-align: center;
+
+    // MEDIA QUERY
+    @include tablet {
+      flex-direction: row;
+    }
+
+    @include desktop {
+      flex-wrap: initial;
+    }
+  }
+
+  // ===== TEAMS BTN ===== //
+  &-btns {
+    @include flexBox(center, center);
+    flex-direction: row;
+    margin: 5rem 0 2rem;
+  }
+}
+
+// ===== TEAM ===== //
+.team {
+  width: 100%;
+  transition: $ease-in-out;
+
+  // MEDIA QUERY
+  @include tablet {
+    width: 48%;
+  }
+
+  @include desktop {
+    width: 32%;
+  }
+
+  &__img {
+    position: relative;
+    cursor: pointer;
+
+    &:hover {
+      &::before {
+        width: 100%;
+      }
+
+      img {
+        // transform: scaleZ(1.1);
+        transition: all 0.4s linear;
+      }
+    }
+
+    &::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      width: 0;
+      height: 0.3rem;
+      border-radius: 0.4rem;
+      background-color: $red;
+      z-index: 9;
+      transition: all 0.4s linear;
+    }
+  }
+  .social__img {
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}

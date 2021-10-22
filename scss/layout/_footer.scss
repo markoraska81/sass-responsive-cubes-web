@@ -1,0 +1,18 @@
+// ===== FOOTER STYLE ===== //
+.footer {
+  background-color: #2b2f38;
+  color: set-text-color(#000);
+  font-size: 1rem;
+  padding: 1rem;
+  text-align: center;
+
+  // MEDIA QUERY
+  @include laptop {
+    text-align: left;
+    font-size: 1.15rem;
+  }
+
+  &-body {
+    @include wrapper(80%, 0 auto);
+  }
+}

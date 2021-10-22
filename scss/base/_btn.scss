@@ -1,0 +1,104 @@
+// ===== BTN STYLE ===== //
+%btn {
+  display: inline-block;
+  width: 200px;
+  margin: 0.5rem auto;
+  padding: 1rem;
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  text-align: center;
+  border-radius: 0.6rem;
+  outline: none;
+  cursor: pointer;
+}
+
+// ===== BTN HOME ===== //
+.btn-home {
+  @extend %btn;
+  margin-top: 0;
+  transition: $ease-in-out;
+  background-color: transparent;
+  color: set-text-color(#000);
+  border: solid 1px #8a8a8a;
+  margin-top: 0;
+
+  &:hover,
+  &:focus {
+    background-color: #ed1c24;
+    border: solid 1px #ed1c24;
+  }
+}
+
+// ===== BTN SUBSCRIBE ===== //
+.btn-subscribe {
+  width: 100%;
+  min-height: 3rem;
+  font-size: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  background-color: $red;
+  border: none;
+  border-radius: 0.6rem;
+  color: #fff;
+
+  // MEDIA QUERY
+  @include tablet {
+    width: 40%;
+  }
+}
+
+// ===== BTN WORK ===== //
+.btn-work {
+  padding: 1rem;
+  background-color: #fff;
+  color: #ed1c24;
+  text-transform: uppercase;
+  border: none;
+  border-radius: 0.6rem;
+}
+
+// ===== BTN MORE ===== //
+.btn-more {
+  @extend .btn-home;
+  color: set-text-color(#fff);
+
+  &:hover,
+  &:focus {
+    color: set-text-color(#000);
+  }
+}
+
+// ===== BTN CIRCLE ===== //
+.btn-circle {
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background: gray;
+  display: flex;
+  margin-right: 2rem;
+
+  &:first-child {
+    background-color: #ed1c24;
+    transform: scale(1.1);
+  }
+}
+
+// ===== BTN CONTACT ===== //
+.btn-contact {
+  @extend .btn-more;
+  margin: 0;
+  background-color: $red;
+  color: set-text-color(#000);
+  border: none;
+
+  &:hover,
+  &:focus {
+    border: none;
+  }
+
+  // MEDIA QUERY
+  @include laptop {
+    margin-bottom: 0;
+    margin-top: 0;
+  }
+}

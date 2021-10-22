@@ -1,0 +1,61 @@
+// ===== SECTION SERVICES STYLE ===== //
+.services {
+  @include wrapper(80%, 0 auto);
+
+  &-box {
+    @include flexBox(space-between, center);
+    flex-direction: column;
+    flex-wrap: wrap;
+    gap: 1rem;
+
+    // MEDIA QUERY
+    @include mobile {
+      flex-direction: row;
+    }
+  }
+}
+
+// ===== SERVICE STYLE ===== //
+.service {
+  padding: 2rem 1rem;
+  text-align: center;
+
+  // MEDIA QUERY
+  @include mobile {
+    width: 47%;
+  }
+
+  @include desktop {
+    width: 23%;
+  }
+
+  &-img {
+    @include flexBox(center, center);
+    flex-direction: column;
+    height: 115px;
+    width: 115px;
+    margin: 0 auto 2rem;
+    border-radius: 50%;
+    box-shadow: 0 0 0 3px #dadada;
+    cursor: pointer;
+
+    .fas,
+    .fab,
+    .far {
+      font-size: 3rem;
+      color: $red;
+    }
+
+    &-desc {
+      font-size: 0.9rem;
+      max-width: 20rem;
+      margin: 0 auto;
+      height: 3rem;
+
+      // MEDIA QUERY
+      @include laptop {
+        font-size: 1.15rem;
+      }
+    }
+  }
+}

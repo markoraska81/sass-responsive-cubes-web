@@ -1,0 +1,52 @@
+// ===== SECTION TESTIMONIAL STYLE ===== //
+.testimonials {
+  background: {
+    image: url(../../img/bcg/testimonials-background.jpg);
+    size: cover;
+    position: center;
+    repeat: no-repeat;
+  }
+  color: set-text-color(#000);
+  text-align: center;
+
+  // ===== BODY ===== //
+  &-body {
+    @include wrapper(80%, 0 auto);
+    @include flexBox(space-between, center);
+
+    // MEDIA QUERY
+    @include laptop {
+      max-width: 45rem;
+    }
+
+    // ===== TESTIMONIAL ===== //
+    .testimonial {
+      @include flexBox(center, center);
+      flex-direction: column;
+
+      h5 {
+        font-size: 1.1rem;
+      }
+
+      p {
+        font-size: 1.1rem;
+        font-style: italic;
+      }
+
+      &-heading {
+        img {
+          width: 100px;
+          margin: 0 auto;
+        }
+      }
+    }
+
+    .arrow-left {
+      margin-right: 3rem;
+    }
+
+    .arrow-right {
+      margin-left: 3rem;
+    }
+  }
+}

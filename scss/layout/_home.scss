@@ -1,0 +1,36 @@
+// ===== SECTION HOME STYLE ===== //
+.home {
+  @include flexBox(center, center);
+  height: 100vh;
+  flex-direction: column;
+  background: {
+    image: url(../img/bcg/main-banner.jpg);
+    size: cover;
+    position: center;
+    repeat: no-repeat;
+  }
+  padding-top: 5rem;
+  text-align: center;
+
+  &-banner {
+    @include wrapper(90%, 0 auto 2rem);
+
+    &__btn {
+      @include flexBox(center, center);
+      flex-direction: column;
+
+      // MEDIA QUERY
+      @include tablet {
+        flex-direction: row;
+        gap: 1rem;
+      }
+    }
+
+    &__scroll {
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+      bottom: 50px;
+    }
+  }
+}

@@ -1,0 +1,34 @@
+// ===== HEADER STYLE ===== //
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 0.5rem 0;
+  z-index: 9;
+}
+
+// ===== NAVBAR STYLE ===== //
+.navbar {
+  @include wrapper(80%, 0 auto);
+  @include flexBox(space-between, center);
+
+  // NAVBAR BTN
+  &-btn {
+    display: flex;
+    gap: 1rem;
+
+    &__text {
+      display: none;
+
+      // MEDIA QUERY
+      @include laptop {
+        display: block;
+      }
+    }
+
+    &__icon {
+      cursor: pointer;
+    }
+  }
+}

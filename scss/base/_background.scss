@@ -1,0 +1,9 @@
+@import './config';
+
+// ===== BACKGROUND STYLE ===== //
+.bcg {
+  // HEADER
+  &-header {
+    @include set-background(#2b2f38cc);
+  }
+}

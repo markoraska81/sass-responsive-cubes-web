@@ -1,0 +1,33 @@
+// ===== NEWSLETTER STYLE ===== //
+.newsletter {
+  background: {
+    image: url(../img/bcg/newsletter-background.jpg);
+  }
+
+  &-body {
+    @include wrapper(80%, 0 auto);
+  }
+
+  &-form {
+    @include flexBox(center, center);
+    flex-direction: column;
+    margin: 0 auto;
+    gap: 0.5rem;
+
+    // MEDIA QUERY
+    @include tablet {
+      flex-direction: row;
+    }
+
+    input {
+      width: 100%;
+      min-height: 3rem;
+      padding: 0 2rem;
+      font-size: 1.1rem;
+      font-weight: 100;
+      border-radius: 0.6rem;
+      outline: none;
+      border: none;
+    }
+  }
+}
