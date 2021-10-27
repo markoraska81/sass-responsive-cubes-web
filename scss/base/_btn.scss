@@ -1,9 +1,9 @@
 // ===== BTN STYLE ===== //
 %btn {
   display: inline-block;
-  width: 200px;
+  width: 180px;
   margin: 0.5rem auto;
-  padding: 1rem;
+  padding: 0.8rem;
   font-size: 0.9rem;
   text-transform: uppercase;
   text-align: center;
@@ -81,12 +81,16 @@
     background-color: #ed1c24;
     transform: scale(1.1);
   }
+
+  &:last-child {
+    margin-right: 0;
+  }
 }
 
 // ===== BTN CONTACT ===== //
 .btn-contact {
   @extend .btn-more;
-  margin: 0;
+  margin-top: 1rem;
   background-color: $red;
   color: set-text-color(#000);
   border: none;

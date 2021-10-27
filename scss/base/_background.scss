@@ -4,6 +4,6 @@
 .bcg {
   // HEADER
   &-header {
-    @include set-background(#2b2f38cc);
+    @include set-background(rgba($gray, 0.75));
   }
 }
